@@ -12,7 +12,6 @@ namespace Application.DI
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddScoped<AppServices.IAppChainService, AppServices.AppChainService>();
-            services.AddScoped<AppServices.IAppChainServiceDepreciate, AppServices.AppChainServiceDepreciate>();
             services.AddScoped<IBlockChainQueries, BlockChainQueries>();
             services.AddScoped<ICommandDispatcher, CommandDispatcher>();
 

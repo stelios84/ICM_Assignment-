@@ -28,3 +28,4 @@ C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\Domain\obj\
 C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
 C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\Domain\obj\Debug\netstandard2.0\Domain.dll
 C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\Domain\obj\Debug\netstandard2.0\Domain.pdb
+C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\src\Domain\obj\Debug\netstandard2.0\Domain.sourcelink.json

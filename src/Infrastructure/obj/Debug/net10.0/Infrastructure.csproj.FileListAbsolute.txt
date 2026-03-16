@@ -43,3 +43,4 @@ C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\Infrastruct
 C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\Infrastructure\obj\Debug\net10.0\refint\Infrastructure.dll
 C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\Infrastructure\obj\Debug\net10.0\Infrastructure.pdb
 C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\Infrastructure\obj\Debug\net10.0\ref\Infrastructure.dll
+C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\src\Infrastructure\obj\Debug\net10.0\Infrastructure.sourcelink.json

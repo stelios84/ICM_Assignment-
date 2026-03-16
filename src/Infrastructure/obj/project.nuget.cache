@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R/mROLnp7fo=",
+  "dgSpecHash": "lyvDpoVRKeA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\steliosch\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.4\\microsoft.data.sqlite.core.10.0.4.nupkg.sha512",
     "C:\\Users\\steliosch\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.4\\microsoft.entityframeworkcore.10.0.4.nupkg.sha512",

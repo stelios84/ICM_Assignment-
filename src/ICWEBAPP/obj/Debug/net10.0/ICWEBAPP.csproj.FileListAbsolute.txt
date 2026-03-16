@@ -235,3 +235,4 @@ C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\ICWEBAPP\ob
 C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\ICWEBAPP\obj\Debug\net10.0\ICWEBAPP.pdb
 C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\ICWEBAPP\obj\Debug\net10.0\ICWEBAPP.genruntimeconfig.cache
 C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\srctest\ICWEBAPP\obj\Debug\net10.0\ref\ICWEBAPP.dll
+C:\Users\steliosch\Documents\Visual Studio 2022\Projects\icm\src\ICWEBAPP\obj\Debug\net10.0\ICWEBAPP.sourcelink.json

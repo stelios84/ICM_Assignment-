@@ -20,7 +20,8 @@ namespace XUnitAppTests.ApplicationTest
             var mockDispatcher = new MockCommandDispatcher();
             var appser = new MockAppService();
 
-            var cmd = new Application.CQRS.Commands.AddChainBlockCommand(EnumBlockType.btc_main, DateTime.Now, Application.Enums.AppEnumSourceProvider.Blockcypher);
+            var cmd = new Application.CQRS.Commands.AddChainBlockCommand(Application.Enums.AppEnumBlockChain.btc_main, 
+                DateTime.Now, Application.Enums.AppEnumSourceProvider.Blockcypher);
 
             //add and fetch in one
             var dtoresults = await appser.AddAndFetch(cmd);
@@ -28,7 +29,7 @@ namespace XUnitAppTests.ApplicationTest
             Assert.True(dtoresults.Count > 0);
 
 
-            cmd.BlockChainType = EnumBlockType.dash_main;
+            cmd.BlockChainType = Application.Enums.AppEnumBlockChain.dash_main;
             //add block chain
             await appser.AddChainBlock(cmd);
         }
@@ -143,20 +144,10 @@ namespace XUnitAppTests.ApplicationTest
         public MockUOF(IChainRepository chainrepository)
         {
             _chainrepository = chainrepository;
-        }
-
-        public IBtcTest3Repository BtcTest3Repository => throw new NotImplementedException();
-
-        public IDashRepository DashRepository => throw new NotImplementedException();
-
-        public IEthRepository EthRepository => throw new NotImplementedException();
-
-        public ILtcRepository LtcRepository => throw new NotImplementedException();
-
+        } 
         public IChainRepository ChainRepository => _chainrepository;
 
-        public IBtcRepository BtcRepository => throw new NotImplementedException();
-
+       
         public void Commit()
         {
             throw new NotImplementedException();

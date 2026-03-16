@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QyuXTXROSK8=",
+  "dgSpecHash": "bbxhN9gtXAM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\XUnitAppTests\\XUnitAppTests.csproj",
+  "projectFilePath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\XUnitAppTests\\XUnitAppTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\steliosch\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\steliosch\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\XUnitAppTests\\XUnitAppTests.csproj": {}
+    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\XUnitAppTests\\XUnitAppTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Application\\Application.csproj": {
+    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\steliosch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Application\\obj\\",
+        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\Domain.csproj"
+              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -351,14 +351,14 @@
         }
       }
     },
-    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\Domain.csproj": {
+    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\steliosch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -420,14 +420,14 @@
         }
       }
     },
-    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\ICWEBAPP\\ICWEBAPP.csproj": {
+    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\ICWEBAPP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\ICWEBAPP\\ICWEBAPP.csproj",
+        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\ICWEBAPP.csproj",
         "projectName": "ICWEBAPP",
-        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\ICWEBAPP\\ICWEBAPP.csproj",
+        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\ICWEBAPP.csproj",
         "packagesPath": "C:\\Users\\steliosch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\ICWEBAPP\\obj\\",
+        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -449,8 +449,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Application\\Application.csproj"
+              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\Application.csproj"
               }
             }
           }
@@ -921,14 +921,14 @@
         }
       }
     },
-    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\steliosch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -950,8 +950,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\Domain.csproj"
+              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Domain.csproj"
               }
             }
           }
@@ -1275,14 +1275,14 @@
         }
       }
     },
-    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\XUnitAppTests\\XUnitAppTests.csproj": {
+    "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\XUnitAppTests\\XUnitAppTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\XUnitAppTests\\XUnitAppTests.csproj",
+        "projectUniqueName": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\XUnitAppTests\\XUnitAppTests.csproj",
         "projectName": "XUnitAppTests",
-        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\XUnitAppTests\\XUnitAppTests.csproj",
+        "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\XUnitAppTests\\XUnitAppTests.csproj",
         "packagesPath": "C:\\Users\\steliosch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\XUnitAppTests\\obj\\",
+        "outputPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\XUnitAppTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1304,17 +1304,17 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Application\\Application.csproj"
+              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\Application.csproj"
               },
-              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Domain\\Domain.csproj"
+              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\ICWEBAPP\\ICWEBAPP.csproj": {
-                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\ICWEBAPP\\ICWEBAPP.csproj"
+              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\ICWEBAPP.csproj": {
+                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\ICWEBAPP.csproj"
               },
-              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
