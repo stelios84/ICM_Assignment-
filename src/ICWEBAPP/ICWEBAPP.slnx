@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="../Application/Application.csproj" />
+    <Project Path="../Domain/Domain.csproj" />
+    <Project Path="../Infrastructure/Infrastructure.csproj" />
+    <Project Path="../XUnitAppTests/XUnitAppTests.csproj" />
+    <Project Path="ICWEBAPP.csproj" />
+  </Folder>
+</Solution>
