@@ -1,4 +1,5 @@
 using Application.DI;
+using Infrastructure.DB.DBContext;
 using Infrastructure.DI;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,9 +25,9 @@ public partial class Program
 
         var sqlite_connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-        //create db schema
-        var _dbFactory = new Infrastructure.DB.DatabaseSchemaService();
-        _dbFactory.CreateDatabaseSchemaIfNotExists(sqlite_connectionString);
+        //create db schema using raw command
+       // var _dbschemaService = new Infrastructure.DB.DatabaseSchemaService();
+        //_dbschemaService.CreateDatabaseSchemaIfNotExists(sqlite_connectionString);
 
         //EF DB context
         builder.Services.AddDbContext<Infrastructure.DB.DBContext.AppDBContext>(optionx =>
@@ -37,14 +38,23 @@ public partial class Program
         //DB Context Factory
         builder.Services.AddDbContextFactory<Infrastructure.DB.DBContext.AppDBContext>(o =>
         {
-            o.UseSqlite(sqlite_connectionString);
+            o.UseSqlite(sqlite_connectionString);            
         },ServiceLifetime.Scoped);
 
+        
 
         builder.Services.AddApplication();
         builder.Services.AddInfrastructure();
 
         var app = builder.Build();
+
+        using(var sc = app.Services.CreateScope())
+        {
+            var dbcon = sc.ServiceProvider.GetRequiredService<AppDBContext>();
+           // dbcon.Database.EnsureDeleted();
+            dbcon.Database.EnsureCreated();
+
+        }
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())

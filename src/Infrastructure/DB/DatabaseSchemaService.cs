@@ -21,11 +21,11 @@ namespace Infrastructure.DB
         public void CreateDatabaseSchemaIfNotExists(string connectionstring)
         {
             CreateSingleTable(connectionstring);
-            CreateETH(connectionstring);
-            CreateBTC(connectionstring);
-            CreateBTCTest3(connectionstring);
-            CreateDash(connectionstring);
-            CreateLTC(connectionstring);
+            //CreateETH(connectionstring);
+            //CreateBTC(connectionstring);
+            //CreateBTCTest3(connectionstring);
+            //CreateDash(connectionstring);
+            //CreateLTC(connectionstring);
 
         }
         void CreateSingleTable(string cs)
@@ -47,6 +47,13 @@ namespace Infrastructure.DB
                 var indexcmd = c.CreateCommand();
                 indexcmd.CommandText = "CREATE INDEX IF NOT EXISTS Chains_CreatetAt ON Chains (CreatedAt)";
                 indexcmd.ExecuteNonQuery();
+
+                indexcmd.CommandText = "CREATE INDEX IF NOT EXISTS Chains_sourceProvider ON Chains (sourceProvider)";
+                indexcmd.ExecuteNonQuery();
+
+                indexcmd.CommandText = "CREATE INDEX IF NOT EXISTS Chains_name ON Chains (Name)";
+                indexcmd.ExecuteNonQuery();
+
             }
         }
 

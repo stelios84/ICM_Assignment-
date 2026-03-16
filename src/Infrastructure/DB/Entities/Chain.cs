@@ -1,4 +1,6 @@
-﻿ 
+﻿
+
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.DB.Entities
 {

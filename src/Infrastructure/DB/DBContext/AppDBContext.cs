@@ -5,14 +5,7 @@ namespace Infrastructure.DB.DBContext
     public class AppDBContext : DbContext
     {
         
-        public DbSet<Entities.Eth> EthChain { get; set; }
-
-        public DbSet<Entities.BTC> BtcChain { get; set; }
-
-        public DbSet<Entities.BTCTest3> BtcChainTest3 { get; set; }
-
-        public DbSet<Entities.Dash> Dash { get; set; }
-        public DbSet<Entities.LTC> LtcChain { get; set; }
+        
 
         public DbSet<Entities.Chain> Chains { get; set; }
 
@@ -22,13 +15,29 @@ namespace Infrastructure.DB.DBContext
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Entities.ChainStatus>().ToTable("blockchainSypher");
-            modelBuilder.Entity<Entities.BTC>().ToTable("BS_chain_BTC");
-            modelBuilder.Entity<Entities.BTCTest3>().ToTable("BS_chain_BTCTEST3");
-            modelBuilder.Entity<Entities.Dash>().ToTable("BS_chain_DASH");
-            modelBuilder.Entity<Entities.Eth>().ToTable("BS_chain_ETH");
-            modelBuilder.Entity<Entities.LTC>().ToTable("BS_chain_LTC");
             modelBuilder.Entity<Entities.Chain>().ToTable("Chains");
+            modelBuilder.Entity<Entities.Chain>(x =>
+            {
+                x.HasKey(g => g.ID);
+
+                x.HasIndex(e => e.ID);
+                x.HasIndex(e => e.CreatedAt);
+                x.HasIndex(e => e.Name);
+                x.HasIndex(e => e.sourceProvider);
+
+
+                // These properties are marked as required at the database level.
+                // Technically, this is not strictly necessary because our domain model
+                // already enforces validation rules, expressing what a valid Chain is.
+                // Adding the constraints here ensures the database also enforces them,
+                // providing an additional layer of protection and preventing invalid data
+                // from being inserted outside the domain layer.
+                x.Property(g=>g.Name).IsRequired();
+                x.Property(g => g.CreatedAt).IsRequired();
+                x.Property(g => g.sourceProvider).IsRequired();
+                
+                
+            });
 
             base.OnModelCreating(modelBuilder);
         }

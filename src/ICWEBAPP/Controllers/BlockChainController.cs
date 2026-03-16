@@ -94,7 +94,7 @@ namespace ICWEBAPP.Controllers
             await _appChainService.AddChainBlock(cmd, cancellationToken);
 
 
-            var history = _blockChainQueries.GetBlockChainHistoryAsynch(AppEnumSourceProvider.Blockcypher, AppEnumBlockChain.btc_test3, cancellationToken);
+            var history =  await _blockChainQueries.GetBlockChainHistoryAsynch(AppEnumSourceProvider.Blockcypher, AppEnumBlockChain.btc_test3, cancellationToken);
 
             return Ok(history);
         }
