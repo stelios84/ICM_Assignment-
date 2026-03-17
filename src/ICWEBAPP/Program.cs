@@ -25,7 +25,7 @@ public partial class Program
 
         var sqlite_connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-        //create db schema using raw command
+        //create db schema using raw command.
        // var _dbschemaService = new Infrastructure.DB.DatabaseSchemaService();
         //_dbschemaService.CreateDatabaseSchemaIfNotExists(sqlite_connectionString);
 

@@ -18,9 +18,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{C89F7701-1230-045D-AC93-AE7F7C59B668}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\infrastructure\\db\\entities\\chain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5826D3E2-35D1-3394-E8AD-3768DEE232D8}|..\\Application\\Application.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\application\\di\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,8 +39,7 @@
               "RelativeToolTip": "Controllers\\BlockChainController.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwGAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T20:52:19.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T20:52:19.165Z"
             },
             {
               "$type": "Document",
@@ -55,8 +51,7 @@
               "RelativeToolTip": "..\\Infrastructure\\DB\\Entities\\Chain.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T20:38:19.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T20:38:19.428Z"
             },
             {
               "$type": "Document",
@@ -68,8 +63,7 @@
               "RelativeToolTip": "..\\Infrastructure\\DB\\DatabaseSchemaService.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T20:33:26.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T20:33:26.852Z"
             },
             {
               "$type": "Document",
@@ -79,22 +73,10 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAowC4AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwBIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T20:04:34.758Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\DI\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DI\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\DI\\DependencyInjection.cs",
-              "RelativeToolTip": "..\\Application\\DI\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T20:04:18.555Z"
             },
             {
               "$type": "Document",
@@ -106,8 +88,7 @@
               "RelativeToolTip": "..\\Application\\AppServices\\AppChainService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T19:54:41.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T19:54:41.649Z"
             }
           ]
         }

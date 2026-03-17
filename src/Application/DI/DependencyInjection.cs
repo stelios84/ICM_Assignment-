@@ -1,9 +1,7 @@
 ﻿using Application.CQRS;
 using Application.CQRS.Queries;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Application.DI
 {
@@ -26,6 +24,8 @@ namespace Application.DI
             {
                 services.AddScoped(h.i, h.t);
             }
+
+
 
             return services;
         }
