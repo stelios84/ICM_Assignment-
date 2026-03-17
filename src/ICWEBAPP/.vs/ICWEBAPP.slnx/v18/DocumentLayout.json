@@ -3,12 +3,21 @@
   "WorkspaceRootPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7424AD4C-1330-66D4-1AFE-9F6CD7C986EF}|ICWEBAPP.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\icwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7424AD4C-1330-66D4-1AFE-9F6CD7C986EF}|ICWEBAPP.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5C8CBAE-DE02-7B4C-706D-5B7BB03EEA4F}|..\\Domain\\Domain.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\domain\\providers\\ichainprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7424AD4C-1330-66D4-1AFE-9F6CD7C986EF}|ICWEBAPP.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\icwebapp\\controllers\\blockchaincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7424AD4C-1330-66D4-1AFE-9F6CD7C986EF}|ICWEBAPP.csproj|solutionrelative:controllers\\blockchaincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7424AD4C-1330-66D4-1AFE-9F6CD7C986EF}|ICWEBAPP.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\icwebapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7424AD4C-1330-66D4-1AFE-9F6CD7C986EF}|ICWEBAPP.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5826D3E2-35D1-3394-E8AD-3768DEE232D8}|..\\Application\\Application.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\application\\cqrs\\commands\\addchainblockcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5C8CBAE-DE02-7B4C-706D-5B7BB03EEA4F}|..\\Domain\\Domain.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\domain\\services\\ichainblockdomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C89F7701-1230-045D-AC93-AE7F7C59B668}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\infrastructure\\db\\databaseschemaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -27,8 +36,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IChainProvider.cs",
+              "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Providers\\IChainProvider.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Providers\\IChainProvider.cs",
+              "ToolTip": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Providers\\IChainProvider.cs",
+              "RelativeToolTip": "..\\Domain\\Providers\\IChainProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T13:46:38.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-17T13:28:41.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddChainBlockCommand.cs",
+              "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\CQRS\\Commands\\AddChainBlockCommand.cs",
+              "RelativeDocumentMoniker": "..\\Application\\CQRS\\Commands\\AddChainBlockCommand.cs",
+              "ToolTip": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\CQRS\\Commands\\AddChainBlockCommand.cs",
+              "RelativeToolTip": "..\\Application\\CQRS\\Commands\\AddChainBlockCommand.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T13:21:43.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IChainBlockDomainService.cs",
+              "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Services\\IChainBlockDomainService.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Services\\IChainBlockDomainService.cs",
+              "ToolTip": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Domain\\Services\\IChainBlockDomainService.cs",
+              "RelativeToolTip": "..\\Domain\\Services\\IChainBlockDomainService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T13:20:36.364Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -37,13 +98,14 @@
               "RelativeDocumentMoniker": "Controllers\\BlockChainController.cs",
               "ToolTip": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\Controllers\\BlockChainController.cs",
               "RelativeToolTip": "Controllers\\BlockChainController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwGAAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwGYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T20:52:19.165Z"
+              "WhenOpened": "2026-03-16T20:52:19.165Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Chain.cs",
               "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\DB\\Entities\\Chain.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\DB\\Entities\\Chain.cs",
@@ -55,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "DatabaseSchemaService.cs",
               "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\DB\\DatabaseSchemaService.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\DB\\DatabaseSchemaService.cs",
@@ -67,20 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwBIAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T20:04:34.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "AppChainService.cs",
               "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Application\\AppServices\\AppChainService.cs",
               "RelativeDocumentMoniker": "..\\Application\\AppServices\\AppChainService.cs",
