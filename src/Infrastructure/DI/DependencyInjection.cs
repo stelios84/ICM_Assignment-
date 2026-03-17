@@ -10,9 +10,9 @@ namespace Infrastructure.DI
         {
             services.AddScoped<Domain.Repositories.IUnitOfWork, DB.UnitOfWork>();          
            
-            services.AddScoped<IsourceProviderFactory, SourceProviderFactoryTest>(x =>
+            services.AddScoped<IsourceProviderFactory, SourceProviderFactory>(x =>
             {
-                return new Providers.SourceProviderFactoryTest(new HttpClient());
+                return new Providers.SourceProviderFactory(new HttpClient());
             });
             return services;
         }

@@ -2,10 +2,10 @@
 
 namespace Infrastructure.Providers
 {
-    internal class SourceProviderFactoryTest : IsourceProviderFactory
+    internal class SourceProviderFactory : IsourceProviderFactory
     {
         HttpClient _httpclient;
-        public SourceProviderFactoryTest(HttpClient httpClient)
+        public SourceProviderFactory(HttpClient httpClient)
         {
             _httpclient = httpClient;
         }

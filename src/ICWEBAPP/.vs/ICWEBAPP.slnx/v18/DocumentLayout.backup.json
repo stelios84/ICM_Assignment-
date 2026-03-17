@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\ICWEBAPP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C89F7701-1230-045D-AC93-AE7F7C59B668}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\infrastructure\\providers\\sourceproviderfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C89F7701-1230-045D-AC93-AE7F7C59B668}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\steliosch\\documents\\visual studio 2022\\projects\\icm\\src\\infrastructure\\providers\\blockcypherprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,6 +21,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SourceProviderFactory.cs",
+              "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Providers\\SourceProviderFactory.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Providers\\SourceProviderFactory.cs",
+              "ToolTip": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Providers\\SourceProviderFactory.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Providers\\SourceProviderFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T21:47:02.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BlockCypherProvider.cs",
               "DocumentMoniker": "C:\\Users\\steliosch\\Documents\\Visual Studio 2022\\Projects\\icm\\src\\Infrastructure\\Providers\\BlockCypherProvider.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Providers\\BlockCypherProvider.cs",
