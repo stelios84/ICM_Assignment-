@@ -32,23 +32,24 @@ namespace Application.CQRS.Queries
 
         public async Task<List<BlockChainDto>> GetBlockChainHistoryAsynch(AppEnumSourceProvider sourceProvider, AppEnumBlockChain blockChain, CancellationToken cancellationToken)
         {
-            string chainName=MappingHelper.GetChainName(sourceProvider,blockChain);
+            string chainName = MappingHelper.GetChainName(sourceProvider, blockChain);
+            var mylist = new List<BlockChainDto>();
+
             using (var dbcon = contextFactory.CreateDbContext())
             {
-                var data = await dbcon.Chains.Where(x => x.sourceProvider == sourceProvider.ToString() && x.Name == chainName).Select(s => new { s.Name, s.JsonApi, s.CreatedAt }).OrderByDescending(x => x.CreatedAt).ToListAsync(cancellationToken);
-                var todto = data.Select(x => new BlockChainDto()
+                //AsNoTracking to mark db we dont want track changes as will improve also the perfomance
+                var data = await dbcon.Chains.AsNoTracking().Where(x => x.sourceProvider == sourceProvider.ToString() && x.Name == chainName).Select(s => new { s.Name, s.JsonApi, s.CreatedAt }).OrderByDescending(x => x.CreatedAt).ToListAsync(cancellationToken);
+                mylist = data.Select(x => new BlockChainDto()
                 {
                     CreatedAt = x.CreatedAt.FromUtc(),
                     JsonData = System.Text.Json.JsonSerializer.Deserialize<object>(x.JsonApi),
 
-                });
-                return todto.ToList();
-
+                }).ToList();
             }
-            throw new NotImplementedException();
+            return mylist;
         }
 
-        
+
 
 
 
