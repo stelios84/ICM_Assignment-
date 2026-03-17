@@ -3,6 +3,8 @@
 
 namespace Infrastructure.DB
 {
+
+    [Obsolete("use EF EnsureCreate",true)]
     public class DatabaseSchemaService
     {
         public DatabaseSchemaService()

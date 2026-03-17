@@ -1,4 +1,4 @@
-﻿using Domain.Providers;
+﻿ 
 using System;
 
 namespace Domain.Aggregates.ChainAR
@@ -57,21 +57,7 @@ namespace Domain.Aggregates.ChainAR
             return _jsonApi;
         }
 
-        public EnumBlockChain GetBlockType()
-        {
-            if (_name == "BTC.main")
-                return EnumBlockChain.btc_main;
-            if (_name == "DASH.main")
-                return EnumBlockChain.dash_main;
-            if (_name == "ETH.main")
-                return EnumBlockChain.eth_main;
-            if (_name == "BTC.test3")
-                return EnumBlockChain.btc_test3;
-            if (_name == "LTC.main")
-                return EnumBlockChain.ltc_main;
-
-            throw new ArgumentException($"Unsupported blockchain name: {_name}");
-        }
+        
 
     }
 

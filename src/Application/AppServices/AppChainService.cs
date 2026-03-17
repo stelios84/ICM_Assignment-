@@ -1,9 +1,14 @@
 ﻿using Application.CQRS.Commands;
 using Application.DTO;
-using Application.Enums;
-
 namespace Application.AppServices
 {
+
+    /// <summary>
+    /// While controllers typically use a dispatcher to send commands, and command handlers encapsulate the application logic for a single use case, 
+    /// I have also introduced an Application Service.
+    /// The Application Service acts as a coordinator for more complex scenarios, providing greater control over how multiple use cases or commands 
+    /// are orchestrated.
+    /// </summary>
     public class AppChainService : IAppChainService
     {
         CQRS.ICommandDispatcher _commandDispatcher;
@@ -17,26 +22,7 @@ namespace Application.AppServices
         public async Task<List<BlockChainDto>> AddAndFetch(AddChainBlockCommand addChainBlockCommand,CancellationToken cancellationtoken)
         {
             await _commandDispatcher.DispatchAsync(addChainBlockCommand,cancellationtoken);
-            string BlockType="ETH.main";
-
-            switch (addChainBlockCommand.BlockChainType)
-            {
-                case AppEnumBlockChain.eth_main:
-                    BlockType = "ETH.main";
-                    break;
-                case AppEnumBlockChain.dash_main:
-                    BlockType = "DASH.main";
-                    break;
-                case AppEnumBlockChain.btc_main:
-                    BlockType = "BTC.main";
-                    break;
-                case AppEnumBlockChain.btc_test3:
-                    BlockType = "BTC.test3";
-                    break;
-                case AppEnumBlockChain.ltc_main:
-                    BlockType = "LTC.main";
-                    break;
-            }
+            
             var history = await _queries.GetBlockChainHistoryAsynch(addChainBlockCommand.Source, addChainBlockCommand.BlockChainType, cancellationtoken);
             
             return history;

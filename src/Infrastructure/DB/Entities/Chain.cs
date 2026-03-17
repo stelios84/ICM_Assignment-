@@ -1,7 +1,4 @@
-﻿
-
-using Microsoft.EntityFrameworkCore;
-
+﻿ 
 namespace Infrastructure.DB.Entities
 {
     public class Chain

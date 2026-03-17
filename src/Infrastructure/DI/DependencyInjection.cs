@@ -1,4 +1,5 @@
 ﻿using Domain.Providers;
+using Infrastructure.Providers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure.DI
@@ -7,9 +8,12 @@ namespace Infrastructure.DI
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
-            services.AddScoped<Domain.Repositories.IUnitOfWork, DB.UnitOfWork>();
-            services.AddScoped<IChainProvider, Providers.BlockChainProvider>();
-            services.AddScoped<IProviderFactory, Providers.SourceProviderFactory>();
+            services.AddScoped<Domain.Repositories.IUnitOfWork, DB.UnitOfWork>();          
+           
+            services.AddScoped<IsourceProviderFactory, SourceProviderFactoryTest>(x =>
+            {
+                return new Providers.SourceProviderFactoryTest(new HttpClient());
+            });
             return services;
         }
     }

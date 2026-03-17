@@ -1,48 +1,40 @@
-﻿
+﻿using Domain.Providers;
+
 namespace Infrastructure.Providers
 {
-    public class BlockcypherProvider : Domain.Providers.ISourceProvider
+    public class BlockCypherProvider : AbstractSourceProvider
     {
-        private HttpClient cl;
-        public BlockcypherProvider(HttpClient httpClient)
+        List<EndPointItem> _registerendpoints;
+        HttpClient cl;
+        public BlockCypherProvider(HttpClient httpClient)
         {
             cl = httpClient;
+            _registerendpoints = new List<EndPointItem>
+           {
+               new EndPointItem("https://api.blockcypher.com/v1/eth/main",  BlockCypherchaineType.ETH),
+               new EndPointItem("https://api.blockcypher.com/v1/dash/main", BlockCypherchaineType.Dash),
+               new EndPointItem("https://api.blockcypher.com/v1/btc/main", BlockCypherchaineType.Btc_Main),
+               new EndPointItem("https://api.blockcypher.com/v1/btc/test3", BlockCypherchaineType.BTC_Test3),
+               new EndPointItem("https://api.blockcypher.com/v1/ltc/main", BlockCypherchaineType.LTC_Main)
+           };
         }
 
-        public async Task<string> GetBtcMainAsync(CancellationToken cancellationToken=default)
+        public override EnumSourceProvider SourceProviderType => EnumSourceProvider.Blockcypher;
+
+        public override async Task<string> GetChainBlock(ChaineType absChains, CancellationToken cancellationtoken = default)
         {
-
-            return await cl.GetStringAsync("https://api.blockcypher.com/v1/btc/main", cancellationToken);
-
+            if (absChains is BlockCypherchaineType p)
+            {
+                var registerendpoint = _registerendpoints.FirstOrDefault(g => g.ChainType == absChains);
+                if (registerendpoint == null)
+                {
+                    throw new Exception("Endpoint not registered");
+                }
+                return await cl.GetStringAsync(registerendpoint.url, cancellationtoken);
+               
+            }
+            throw new NotImplementedException();
         }
 
-        public async Task<string> GetBtcTest3SourceAsync(CancellationToken cancellationToken=default)
-        {
-
-            return await cl.GetStringAsync("https://api.blockcypher.com/v1/btc/test3", cancellationToken);
-
-
-        }
-
-        public async Task<string> GetDASHAsync(CancellationToken cancellationToken=default)
-        {
-
-            return await cl.GetStringAsync("https://api.blockcypher.com/v1/dash/main", cancellationToken);
-
-        }
-
-        public async Task<string> GetETHAsynch(CancellationToken cancellationToken = default)
-        {
-
-            return await cl.GetStringAsync("https://api.blockcypher.com/v1/eth/main", cancellationToken);
-
-        }
-
-        public async Task<string> GetLTCSourceAsync(CancellationToken cancellationToken = default)
-        {
-
-            return await cl.GetStringAsync("https://api.blockcypher.com/v1/ltc/main", cancellationToken);
-
-        }
     }
 }

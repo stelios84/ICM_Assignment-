@@ -1,7 +1,8 @@
 ﻿using Application.DTO;
 using Application.Enums;
+using Application.Helpers;
 using Infrastructure;
-using Microsoft.EntityFrameworkCore; 
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.CQRS.Queries
 {
@@ -29,75 +30,27 @@ namespace Application.CQRS.Queries
             this.contextFactory = contextFactory;
         }
 
-
-        /// <summary>
-        /// Improvments
-        /// chainBlockName could be an enum. 
-        /// we could pass also the provider source
-        /// </summary>
-        public async Task<List<BlockChainDto>> GetBlockChainHistoryAsynch(string chainBlockName, CancellationToken cancellationToken)
+        public async Task<List<BlockChainDto>> GetBlockChainHistoryAsynch(AppEnumSourceProvider sourceProvider, AppEnumBlockChain blockChain, CancellationToken cancellationToken)
         {
+            string chainName=MappingHelper.GetChainName(sourceProvider,blockChain);
             using (var dbcon = contextFactory.CreateDbContext())
             {
-                var data = await dbcon.Chains.Where(x => x.Name == chainBlockName).Select(s => new { s.Name, s.JsonApi, s.CreatedAt }).OrderByDescending(x => x.CreatedAt).ToListAsync(cancellationToken);
-                var todto = data.Select(x => new BlockChainDto()
-                {
-                    CreatedAt = x.CreatedAt.FromUtc(),
-                    JsonData = System.Text.Json.JsonSerializer.Deserialize<object>(x.JsonApi)
-                });
-                return todto.ToList();
-
-            }
-        }
-        string GetBlockChainName(AppEnumBlockChain fromType)
-        {
-            switch (fromType)
-            {
-                case AppEnumBlockChain.eth_main:
-                    return "ETH.main";
-                case AppEnumBlockChain.dash_main:
-                    return "DASH.main";
-                case AppEnumBlockChain.btc_main:
-                    return "BTC.main";
-                case AppEnumBlockChain.btc_test3:
-                    return "BTC.test3";
-                case AppEnumBlockChain.ltc_main:
-                    return "LTC.main";
-            }
-
-            throw new KeyNotFoundException();
-        }
-        public async Task<List<BlockChainDto>> GetBlockChainHistoryAsynch(AppEnumSourceProvider sourceProvider, AppEnumBlockChain block, CancellationToken cancellationToken)
-        {
-            using(var dbcon=contextFactory.CreateDbContext())
-            {
-                var data = await dbcon.Chains.Where(x => x.sourceProvider== sourceProvider.ToString() && x.Name == GetBlockChainName(block)).Select(s => new { s.Name, s.JsonApi, s.CreatedAt }).OrderByDescending(x => x.CreatedAt).ToListAsync(cancellationToken);
+                var data = await dbcon.Chains.Where(x => x.sourceProvider == sourceProvider.ToString() && x.Name == chainName).Select(s => new { s.Name, s.JsonApi, s.CreatedAt }).OrderByDescending(x => x.CreatedAt).ToListAsync(cancellationToken);
                 var todto = data.Select(x => new BlockChainDto()
                 {
                     CreatedAt = x.CreatedAt.FromUtc(),
                     JsonData = System.Text.Json.JsonSerializer.Deserialize<object>(x.JsonApi),
 
                 });
-
-                //var list2 = new List<BlockChainDto>();
-
-                //foreach(var d in data)
-                //{
-                //    var jo = System.Text.Json.Nodes.JsonObject.Parse(data.First().JsonApi);                    
-                //    jo["CreatedAt"] = d.CreatedAt;
-
-                //    list2.Add(new BlockChainDto()
-                //    {
-                //        CreatedAt = d.CreatedAt.FromUtc(),
-                //        JsonData = System.Text.Json.JsonSerializer.Deserialize<object>(jo.ToJsonString())
-                //    });
-                //}
-
-                //return list2;
                 return todto.ToList();
 
             }
             throw new NotImplementedException();
         }
+
+        
+
+
+
     }
 }

@@ -3,6 +3,7 @@ using Application.CQRS;
 using Application.CQRS.Commands;
 using Application.DTO;
 using Domain.Aggregates.ChainAR;
+using Domain.Providers;
 using Domain.Repositories;
 
 
@@ -80,29 +81,11 @@ namespace XUnitAppTests.ApplicationTest
         }
     }
 
-    public class MockSourceProvider : Domain.Providers.ISourceProvider
+    public class MockSourceProvider : Domain.Providers.AbstractSourceProvider
     {
-        public Task<string> GetBtcMainAsync(CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
+        public override EnumSourceProvider SourceProviderType =>  EnumSourceProvider.Blockcypher;
 
-        public Task<string> GetBtcTest3SourceAsync(CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<string> GetDASHAsync(CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<string> GetETHAsynch(CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<string> GetLTCSourceAsync(CancellationToken cancellationToken = default)
+        public override Task<string> GetChainBlock(ChaineType chainType, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
