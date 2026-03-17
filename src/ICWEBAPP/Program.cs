@@ -22,13 +22,18 @@ public partial class Program
         builder.Logging.AddConsole();
         builder.Logging.AddDebug();
         builder.Services.AddHealthChecks();
+        
+        builder.Services.AddCors(options=>
+        options.AddPolicy("AllowAll", policy =>
+        {
+            policy.AllowAnyOrigin()   // allow requests from any domain
+                  .AllowAnyHeader()   // allow any HTTP headers
+                  .AllowAnyMethod();  // allow GET, POST, PUT, DELETE, etc.
+        }));
 
         var sqlite_connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-        //create db schema using raw command.
-       // var _dbschemaService = new Infrastructure.DB.DatabaseSchemaService();
-        //_dbschemaService.CreateDatabaseSchemaIfNotExists(sqlite_connectionString);
-
+        
         //EF DB context
         builder.Services.AddDbContext<Infrastructure.DB.DBContext.AppDBContext>(optionx =>
         {
