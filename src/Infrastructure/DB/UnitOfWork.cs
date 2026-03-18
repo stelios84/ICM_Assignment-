@@ -1,36 +1,18 @@
-﻿using Domain.Repositories;
-using Infrastructure.DB.DBContext;
-using Infrastructure.Repositories;
+﻿using Infrastructure.DB.DBContext;
 
 namespace Infrastructure.DB
 {
-    public class UnitOfWork : Domain.Repositories.IUnitOfWork
+    internal class UnitOfWork : Domain.Repositories.IUnitOfWork
     {
-        AppDBContext _context;
-        public UnitOfWork(AppDBContext context)
+        AppDBContext _dbcontext;
+        public UnitOfWork(AppDBContext dbcontext)
         {
-            _context = context;
-        }
-        
-        private IChainRepository _chainRepository;
-        
-       
-        
-        public IChainRepository ChainRepository
-        {
-            get
-            {
-                if (_chainRepository == null)
-                {
-                    _chainRepository = new Infrastructure.Repositories.ChainRepository(_context);
-                }
-                return _chainRepository;
-            }
+            _dbcontext = dbcontext;
         }
 
         public void Commit()
         {
-            _context.SaveChanges();
+            _dbcontext.SaveChanges();
         }
     }
 }

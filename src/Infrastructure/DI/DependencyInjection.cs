@@ -8,8 +8,11 @@ namespace Infrastructure.DI
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
-            services.AddScoped<Domain.Repositories.IUnitOfWork, DB.UnitOfWork>();          
-           
+
+            services.AddScoped<Domain.Repositories.IChainRepository, Infrastructure.Repositories.ChainRepository>();
+            services.AddScoped<Domain.Repositories.IUnitOfWork, DB.UnitOfWork>();
+
+
             services.AddScoped<IsourceProviderFactory, SourceProviderFactory>(x =>
             {
                 return new Providers.SourceProviderFactory(new HttpClient());

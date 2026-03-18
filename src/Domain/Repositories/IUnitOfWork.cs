@@ -3,8 +3,11 @@
     public interface IUnitOfWork
     {
         
-        IChainRepository ChainRepository { get; }
+        
         void Commit();
 
     }
+   
+
+
 }

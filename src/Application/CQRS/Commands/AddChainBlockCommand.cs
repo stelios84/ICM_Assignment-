@@ -29,16 +29,18 @@ namespace Application.CQRS.Commands
 
 
         IUnitOfWork _unitOfWork;
+        IChainRepository _chainRepository;
         IsourceProviderFactory _providerFactory;
         ILogger<AddChaineBlockCommandHandler> _logger;
 
 
         public AddChaineBlockCommandHandler(IUnitOfWork unitOfWork,
-            ILogger<AddChaineBlockCommandHandler> logger, IsourceProviderFactory providerFactory)
+            ILogger<AddChaineBlockCommandHandler> logger, IsourceProviderFactory providerFactory, IChainRepository chainRepository)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
             _providerFactory = providerFactory;
+            _chainRepository = chainRepository;
         }
         public async Task Handle(AddChainBlockCommand command)
         {
@@ -59,7 +61,7 @@ namespace Application.CQRS.Commands
             var _chainBlock = new Domain.Aggregates.ChainAR.BlockChain(domainsourceprovider, _domainchainType.Name, command.CreatedAt, _jsonApi);
 
             //add
-            await _unitOfWork.ChainRepository.AddAsynch(_chainBlock);
+            await _chainRepository.AddAsynch(_chainBlock);
             _unitOfWork.Commit();
 
             _logger.LogInformation($"Chain block {command.BlockChainType.ToString()} from {domainsourceprovider.ToString()} has been added in database");
