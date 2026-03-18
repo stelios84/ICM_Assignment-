@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ICWEBAPP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95675e6b786263baaacd8d1c55df86a4293db731")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+122dec382e2119a78ea1757e93f6ae843b7ca69d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ICWEBAPP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ICWEBAPP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,12 +16,12 @@ namespace XUnitAppTests.ApplicationTest
         public async Task TestApplicationService()
         {
             var mockrepo = new MockChainRepository();
-            var mockUof = new MockUOF(mockrepo);
+            var mockUof = new MockUOF();
             var mocksourceprovider = new MockSourceProvider();
             var mockDispatcher = new MockCommandDispatcher();
             var appser = new MockAppService();
 
-            var cmd = new Application.CQRS.Commands.AddChainBlockCommand(Application.Enums.AppEnumBlockChain.btc_main, 
+            var cmd = new Application.CQRS.Commands.AddChainBlockCommand(Application.Enums.AppEnumBlockChain.btc_main,
                 DateTime.Now, Application.Enums.AppEnumSourceProvider.Blockcypher);
 
             //add and fetch in one
@@ -32,6 +32,11 @@ namespace XUnitAppTests.ApplicationTest
 
             cmd.BlockChainType = Application.Enums.AppEnumBlockChain.dash_main;
             //add block chain
+            
+            //using dispatcher
+            await mockDispatcher.DispatchAsync(cmd);
+
+            //using app service
             await appser.AddChainBlock(cmd);
         }
 
@@ -77,13 +82,13 @@ namespace XUnitAppTests.ApplicationTest
     {
         public Task DispatchAsync<TCommand>(TCommand command, CancellationToken cancellationToken = default) where TCommand : ICommand
         {
-            throw new NotImplementedException();
+            return Task.CompletedTask; 
         }
     }
 
     public class MockSourceProvider : Domain.Providers.AbstractSourceProvider
     {
-        public override EnumSourceProvider SourceProviderType =>  EnumSourceProvider.Blockcypher;
+        public override EnumSourceProvider SourceProviderType => EnumSourceProvider.Blockcypher;
 
         public override Task<string> GetChainBlock(ChaineType chainType, CancellationToken cancellationToken = default)
         {
@@ -122,18 +127,11 @@ namespace XUnitAppTests.ApplicationTest
     }
     public class MockUOF : IUnitOfWork
     {
-        IChainRepository _chainrepository;
 
-        public MockUOF(IChainRepository chainrepository)
-        {
-            _chainrepository = chainrepository;
-        } 
-        public IChainRepository ChainRepository => _chainrepository;
 
-       
         public void Commit()
         {
-            throw new NotImplementedException();
+
         }
     }
 }
